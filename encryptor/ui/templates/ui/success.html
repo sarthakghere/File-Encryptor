@@ -1,0 +1,18 @@
+<!-- ui/templates/success.html -->
+
+{% extends 'ui/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="alert alert-success" role="alert">
+                Files uploaded and encrypted successfully!
+            </div>
+            {% if encrypted_file_path %}
+            <a href="{% url 'util:download_file' %}?file={{ encrypted_file_path }}" class="btn btn-primary">Download Encrypted File</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!-- file_encryptor.html -->
+
+{% extends 'ui/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">File Encryptor</h2>
+                    <form method="POST" action="{% url 'util:save_and_encrypt' %}" enctype="multipart/form-data" novalidate>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary btn-block">Encrypt</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
