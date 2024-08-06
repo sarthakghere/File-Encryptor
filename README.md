@@ -42,6 +42,7 @@ The Django File Encryptor is a web application that allows users to securely enc
 4. **Run the development server:**
 
     ```sh
+    cd encryptor
     python3 manage.py runserver
     ```
 
